@@ -1,50 +1,68 @@
-# React + TypeScript + Vite
+# ![In.Orbit](https://github.com/user-attachments/assets/8f568834-a9de-47a9-b408-c2021ec5aad5)  in.orbit
+ in.orbit - Front-End
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ # in.orbit - Front-End
 
-Currently, two official plugins are available:
+Bem-vindo ao repositório do front-end do projeto **in.orbit**! Este projeto foi desenvolvido durante o evento **NLW Pocket** da Rocketseat e utiliza uma variedade de tecnologias modernas para criar uma interface rica e responsiva.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Você pode encontrar o back-end dessa aplicação em: https://github.com/Krollitte/in.orbit-server/
 
-## Expanding the ESLint configuration
+## Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+* **Vite**: Ferramenta de build rápida para desenvolvimento front-end.
+* **React-Hook-Form**: Biblioteca para gerenciar formulários de forma simples e eficaz.
+* **@tanstack/react-query**: Biblioteca para gerenciamento de dados e caching.
+* **Tailwind CSS**: Framework utilitário para estilização rápida e responsiva.
+* **Zod**: Biblioteca para validação de dados, utilizada tanto no front-end quanto no back-end.
+* **Biome.js**: Alternativa ao ESLint para garantir a qualidade do código.
 
-- Configure the top-level `parserOptions` property like this:
+## Instalação e Configuração
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/Krollitte/in.orbit-frontend.git
+   ```
+2. Instale as dependencias
+  ```bash
+  npm i
+  ```
+
+3. Inicie o servidor de desenvolvimento
+  ```bash
+  npm run dev
+  ```
+
+Estrutura do Projeto
+A estrutura do projeto é organizada da seguinte forma:
+
+```bash
+
+src/
+  assets/           # Arquivos estáticos como imagens e fontes
+  components/       # Componentes React reutilizáveis
+    ui/             # Componentes da interface do usuário
+  http/             # Configurações e serviços HTTP
+  app.tsx           # Componente principal do aplicativo
+  index.css         # Arquivo de estilo global
+  main.tsx          # Ponto de entrada do React
+  vite-env.d.ts     # Declarações de tipo para o Vite
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Fotos
+Aqui estão algumas capturas de tela do aplicativo in.orbit:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Tela Inicial
+![In.Orbit.Tela-inicial](src/assets/empty-dashboard.jpeg)
+<br/>
+Cadastrar metas
+![In.Orbit.Cadastrar-metas](src/assets/register-goal.jpeg)
+<br/>
+Dashboard Preenchido
+![In.Orbit.Dashboard-preenchido](src/assets/full-dashboard.jpeg)
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+
+### Contribuições
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests.
+
+Licença
+Este projeto está licenciado sob a MIT License
